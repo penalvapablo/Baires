@@ -1,81 +1,139 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import { Image } from '@astrojs/image/components';
+import bg_sm from '../assets/bg-sm.jpg';
+import bg_md from '../assets/bg-md.jpg';
+import bg_lg from '../assets/bg-lg.jpg';
+import bg_xl from '../assets/bg-xl.jpg';
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
+<Layout
+  title="Agencia Baires"
+  description="Agencia Baires Branding Boutique">
+  <main class="relative h-screen">
+    <Image
+      format="webp"
+      alt=""
+      src={bg_sm}
+      width={849}
+      height={800}
+      quality={100}
+      class="absolute -z-10 h-screen object-cover md:hidden"
+    />
+    <Image
+      format="webp"
+      alt=""
+      src={bg_md}
+      width={1082}
+      height={1020}
+      quality={100}
+      class="-z-10 hidden h-screen object-cover md:inline lg:hidden"
+    />
+    <Image
+      format="webp"
+      alt=""
+      src={bg_lg}
+      width={2564}
+      height={1402}
+      quality={100}
+      class="-z-10 hidden h-screen object-cover lg:inline 2xl:hidden"
+    />
+    <Image
+      format="webp"
+      alt=""
+      src={bg_xl}
+      width={3021}
+      height={1651}
+      quality={100}
+      class="-z-10 hidden h-screen object-cover 2xl:inline"
+    />
+    <h1
+      class="absolute top-3 left-3 flex flex-col text-center text-white sm:top-8 sm:left-[15%] lg:left-[20%]">
+      <span
+        class="font-prompt text-[1rem] font-light leading-[100%]"
+        >agencia</span
+      >{' '}
+      <span
+        class="font-anton text-[6rem] uppercase leading-[95%]"
+        >Baires</span
+      >{' '}
+      <span
+        class="font-prompt text-[1.6rem] font-bold leading-[100%]"
+        >Branding Boutique</span
+      >
+    </h1>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+    <p
+      class="absolute bottom-24 left-1/2 w-[90%] max-w-[38.75rem] translate-x-[-50%] text-center font-prompt text-lg text-white sm:bottom-44 md:max-w-[60rem] md:text-2xl">
+      Somos una agencia boutique de marketing y publicidad
+      que ayuda a emprendedores y pequeños negocios a unirse
+      al ecosistema digital.
+    </p>
+
+    <div
+      class="absolute bottom-7 left-1/2 flex w-[200px] translate-x-[-50%] justify-between sm:bottom-24">
+      <a href="mailto:elcorreoquequieres@correo.com">
+        <svg
+          class="transform transition-all duration-500 hover:rotate-[360deg]"
+          xmlns="http://www.w3.org/2000/svg"
+          width="65"
+          height="65"
+          viewBox="0 0 256 256"
+          ><path
+            fill="white"
+            d="M224 48H32a8 8 0 0 0-8 8v136a16 16 0 0 0 16 16h176a16 16 0 0 0 16-16V56a8 8 0 0 0-8-8Zm-96 85.15L52.57 64h150.86ZM98.71 128L40 181.81V74.19Zm11.84 10.85l12 11.05a8 8 0 0 0 10.82 0l12-11.05l58 53.15H52.57ZM157.29 128L216 74.18v107.64Z"
+          ></path></svg
+        >
+      </a>
+      <a
+        href="https://www.instagram.com/agencia.baires/"
+        class="mt-[4px]">
+        <svg
+          class="transform transition-all duration-500 hover:rotate-[360deg]"
+          id="instagram"
+          xmlns="http://www.w3.org/2000/svg"
+          width="55"
+          height="55"
+          viewBox="0 0 24 24"
+          ><path
+            fill="white"
+            d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3Z"
+          ></path></svg
+        >
+      </a>
+      <a
+        class="transform transition-all duration-500 hover:rotate-[360deg]"
+        href="https://www.linkedin.com/company/agenciabaires/"
+        class="mb-[2px]"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="60"
+          height="60"
+          viewBox="0 0 24 24"
+          ><path
+            fill="white"
+            d="M6.94 5a2 2 0 1 1-4-.002a2 2 0 0 1 4 .002zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68z"
+          ></path></svg
+        >
+      </a>
+    </div>
+  </main>
+  <script>
+    const text: HTMLParagraphElement =
+      window.document.querySelector('p');
+    console.log(text);
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('-translate-x-56');
+        } else {
+          entry.target.classList.add('-translate-x-56');
+        }
+      });
+    });
+
+    observer.observe(text);
+  </script>
+</Layout>
