@@ -65,14 +65,14 @@ import bg_xl from '../assets/bg-xl.jpg';
     </h1>
 
     <p
-      class="absolute bottom-24 left-1/2 w-[90%] max-w-[38.75rem] translate-x-[-50%] text-center font-prompt text-lg text-white sm:bottom-44 md:max-w-[60rem] md:text-2xl">
+      class="absolute bottom-36 left-1/2 w-[90%] max-w-[38.75rem] translate-x-[-50%] text-center font-prompt text-lg text-white sm:bottom-44 md:max-w-[60rem] md:text-2xl">
       Somos una agencia boutique de marketing y publicidad
       que ayuda a emprendedores y pequeños negocios a unirse
       al ecosistema digital.
     </p>
 
     <div
-      class="absolute bottom-7 left-1/2 flex w-[200px] translate-x-[-50%] justify-between sm:bottom-24">
+      class="absolute bottom-16 left-1/2 flex w-[200px] translate-x-[-50%] justify-between sm:bottom-24">
       <a href="mailto:elcorreoquequieres@correo.com">
         <svg
           class="transform transition-all duration-500 hover:rotate-[360deg]"
@@ -119,21 +119,4 @@ import bg_xl from '../assets/bg-xl.jpg';
       </a>
     </div>
   </main>
-  <script>
-    const text: HTMLParagraphElement =
-      window.document.querySelector('p');
-    console.log(text);
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.remove('-translate-x-56');
-        } else {
-          entry.target.classList.add('-translate-x-56');
-        }
-      });
-    });
-
-    observer.observe(text);
-  </script>
 </Layout>
