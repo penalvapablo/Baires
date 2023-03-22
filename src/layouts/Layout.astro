@@ -7,6 +7,8 @@ import '@fontsource/anton';
 import '@fontsource/prompt';
 import GTMnoScript from '../components/GTMnoScript.astro';
 import GTMscript from '../components/GTMscript.astro';
+import PixelNoScript from '../components/PixelNoScript.astro';
+import PixelScript from '../components/PixelScript.astro';
 
 const { title, description } = Astro.props;
 ---
@@ -14,6 +16,8 @@ const { title, description } = Astro.props;
 <!DOCTYPE html>
 <html lang="es">
   <GTMscript />
+  <PixelScript />
+  <PixelNoScript />
 
   <meta charset="UTF-8" />
   <meta
@@ -38,43 +42,6 @@ const { title, description } = Astro.props;
   <body>
     <GTMnoScript />
     <slot />
-    <style is:global>
-      /* @font-face {
-    font-family: 'Anton';
-    src: url('/fonts/Anton-Regular.ttf') format('ttf');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-  h1 {
-    font-family: 'Anton', sans-serif;
-  } */
-      /* @font-face {
-    font-family: 'Prompt';
-    src: url('/fonts/Prompt-Light.ttf') format('ttf');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Prompt';
-    src: url('/fonts/Prompt-Medium.ttf') format('ttf');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  } */
-      /* :root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	} */
-    </style>
+    <style is:global></style>
   </body>
 </html>
