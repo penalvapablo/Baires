@@ -5,38 +5,41 @@ export interface Props {
 }
 import '@fontsource/anton';
 import '@fontsource/prompt';
+import GTMnoScript from '../components/GTMnoScript.astro';
+import GTMscript from '../components/GTMscript.astro';
+
 const { title, description } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width"
-    />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/Logo-Baires.svg"
-    />
-    <meta
-      name="generator"
-      content={Astro.generator}
-    />
-    <title>{title}</title>
-    <meta
-      name="description"
-      content={description}
-    />
-  </head>
+  <GTMscript />
+
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width"
+  />
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="/Logo-Baires.svg"
+  />
+  <meta
+    name="generator"
+    content={Astro.generator}
+  />
+  <title>{title}</title>
+  <meta
+    name="description"
+    content={description}
+  />
+
   <body>
+    <GTMnoScript />
     <slot />
-  </body>
-</html>
-<style is:global>
-  /* @font-face {
+    <style is:global>
+      /* @font-face {
     font-family: 'Anton';
     src: url('/fonts/Anton-Regular.ttf') format('ttf');
     font-weight: 400;
@@ -46,7 +49,7 @@ const { title, description } = Astro.props;
   h1 {
     font-family: 'Anton', sans-serif;
   } */
-  /* @font-face {
+      /* @font-face {
     font-family: 'Prompt';
     src: url('/fonts/Prompt-Light.ttf') format('ttf');
     font-weight: normal;
@@ -60,7 +63,7 @@ const { title, description } = Astro.props;
     font-style: normal;
     font-display: swap;
   } */
-  /* :root {
+      /* :root {
 		--accent: 124, 58, 237;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
 	}
@@ -72,4 +75,6 @@ const { title, description } = Astro.props;
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
 	} */
-</style>
+    </style>
+  </body>
+</html>
