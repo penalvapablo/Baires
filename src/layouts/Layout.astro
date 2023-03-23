@@ -18,6 +18,21 @@ const { title, description } = Astro.props;
   <GTMscript />
   <PixelScript />
   <PixelNoScript />
+  <!-- Google tag (gtag.js) -->
+  <script
+    type="text/partytown"
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-PMXCG0FWRP"
+  ></script>
+  <script type="text/partytown">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-PMXCG0FWRP');
+  </script>
   <meta
     name="facebook-domain-verification"
     content="yj77xc9kea1ym8ggz4w7jmvyfr0ln6"
